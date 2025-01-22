@@ -1,7 +1,7 @@
 services:
   backup:
     build: .
-    image: Local-Network-Backup:latest
+    image: local-network-backup:latest
     volumes:
       - ./hostnames_and_scripts.xlsx:/app/hostnames_and_scripts.xlsx  # Mount Excel file
       - ./Data:/app/Data  # Source data directory
