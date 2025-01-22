@@ -1,10 +1,9 @@
-version: '3.8'
 services:
   backup:
     build: .
     volumes:
       - ./hostnames_and_scripts.xlsx:/app/hostnames_and_scripts.xlsx  # Mount Excel file
-      - D:/Data:/app/Data  # Source data directory
+      - ./Data:/app/Data  # Source data directory
       - ./Backup:/app/Backup  # Destination backup directory
     environment:
       - EXCEL_FILE=/app/hostnames_and_scripts.xlsx
